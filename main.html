@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Bankart naloga</title>
+</head>
+
+<body>
+
+<p id="cifre"></p>
+
+<form>
+<input type="button" value="DODAJ NAKLJUČNO ŠTEVILO" onclick="add_rand()"> <br><br>
+</form>
+
+<button type="button">DODAJ ŠTEVILO</button> <br><br>
+<button type="button">ODSTRANI ŠTEVILO</button> <br><br>
+<button type="button">ODSTRANI VSE</button> <br><br>
+<button type="button">IZRAČUNAJ MEDIANO</button> <br> 
+
+
+
+<script>
+    const stevila = ["420", "69", "1339", "666", "891"]
+    var x = ""
+    function add_rand() {
+        stevila.push(Math.random() * 1001)
+    }
+
+    for (i = 0; i < stevila.length; i++) {
+        x+= stevila[i] + "<br>";
+        document.getElementById("cifre").innerHTML = x;
+    }
+</script>
+    
+
+</body>
+</html> 

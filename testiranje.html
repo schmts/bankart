@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testiranje</title>
+</head>
+
+<body>
+<p id="cifre"></p>
+
+
+<input type="button" value="DODAJ NAKLJUČNO ŠTEVILO" onclick="addRand()"> <br><br>
+
+
+<input type="button" value="DODAJ ŠTEVILO" onclick="addNmbr()"> <br>
+
+<input type="text" id="input_nmbr"> <br><br>
+<!-- dodaj omejitev, da sprejema samo !!pozitivne!! integerje pri input_nbm -->
+
+<input type="button" value="ODSTRANI ŠTEVILO" onclick="delRand()"> <br><br>
+
+<input type="button" value="ODSTRANI VSE" onclick="delAll()"> <br><br>
+
+
+<button type="button">IZRAČUNAJ MEDIANO</button> <br> 
+
+
+
+<script>
+    const stevila = ["420", "69", "1339", "666", "891"];
+    //for (let i = 0; i < stevila.length, i++){
+    //    text += "<td>" + i  + "</td>";
+
+    //}
+
+
+    document.getElementById("cifre").innerHTML = stevila;
+
+    function addRand() {
+        stevila.push(Math.floor(Math.random() * 1001));
+        document.getElementById("cifre").innerHTML = stevila;
+    }
+    
+    function addNmbr() {
+        form_input = document.getElementById("input_nmbr").value
+        if (form_input < 1){
+        alert("Prosim, da vnesete pozitivno število.");
+        }
+        else if (form_input % 1 != 0) {
+        alert("Prosim, da vnesete celo število.");
+        }
+        else {
+        stevila.push(document.getElementById("input_nmbr").value);
+        document.getElementById("cifre").innerHTML = stevila;
+        }
+    }
+    function delRand() {
+        j = Math.floor(Math.random()* stevila.length);
+        stevila.splice(j, 1);
+        document.getElementById("cifre").innerHTML = stevila;
+    }
+    function delAll() {
+        stevila.splice(0, stevila.length);
+        document.getElementById("cifre").innerHTML = stevila;
+
+    }
+
+</script>
+    
+
+</body>
+</html> 
