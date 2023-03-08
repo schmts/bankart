@@ -1,0 +1,27 @@
+{
+  "name": "rest-bankart",
+  "version": "1.0.0",
+  "description": "Node.js RESTful API za Bankart nalogo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schmts/bankart.git"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Jakop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schmts/bankart/issues"
+  },
+  "homepage": "https://github.com/schmts/bankart#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
